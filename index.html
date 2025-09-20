@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -338,4 +339,346 @@
     <script src="js/chat.js"></script>
     <script src="js/activities.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindfulCompanion - Anonymous Mental Health Support</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="images/logo.svg" alt="MindfulCompanion Logo">
+                <h1>MindfulCompanion</h1>
+            </div>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                </select>
+            </div>
+            <div class="mood-tracker">
+                <h3 id="mood-title">How are you feeling today?</h3>
+                <div class="mood-options">
+                    <div class="mood" data-mood="happy">
+                        <i class="fas fa-smile"></i>
+                        <span>Happy</span>
+                    </div>
+                    <div class="mood" data-mood="neutral">
+                        <i class="fas fa-meh"></i>
+                        <span>Okay</span>
+                    </div>
+                    <div class="mood" data-mood="sad">
+                        <i class="fas fa-frown"></i>
+                        <span>Sad</span>
+                    </div>
+                    <div class="mood" data-mood="anxious">
+                        <i class="fas fa-tired"></i>
+                        <span>Anxious</span>
+                    </div>
+                    <div class="mood" data-mood="angry">
+                        <i class="fas fa-angry"></i>
+                        <span>Angry</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-item active" data-page="chat">
+                    <i class="fas fa-comment-alt"></i>
+                    <span>Chat</span>
+                </div>
+                <div class="menu-item" data-page="resources">
+                    <i class="fas fa-book"></i>
+                    <span>Resources</span>
+                </div>
+                <div class="menu-item" data-page="activities">
+                    <i class="fas fa-tasks"></i>
+                    <span>Activities</span>
+                </div>
+                <div class="menu-item" data-page="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </div>
+            </div>
+            <div class="settings">
+                <div class="menu-item" data-page="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+                <div class="menu-item" id="clear-chat">
+                    <i class="fas fa-trash"></i>
+                    <span>Clear Chat</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <!-- Chat Page -->
+            <div class="page active" id="chat-page">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message bot">
+                            <div class="message-content">
+                                <p>Hello! I'm your MindfulCompanion. How can I support you today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <textarea id="user-input" placeholder="Type your message here..."></textarea>
+                        <button id="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Page -->
+            <div class="page" id="resources-page">
+                <h2>Mental Health Resources</h2>
+                <div class="resources-container">
+                    <div class="resource-category">
+                        <h3>Articles</h3>
+                        <div class="resource-items">
+                            <div class="resource-item">
+                                <h4>Understanding Anxiety</h4>
+                                <p>Learn about common anxiety triggers and coping mechanisms.</p>
+                                <a href="#" class="resource-link">Read More</a>
+                            </div>
+                            <div class="resource-item">
+                                <h4>Mindfulness Practices</h4>
+                                <p>Simple mindfulness exercises you can practice daily.</p>
+                                <a href="#" class="resource-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-category">
+                        <h3>Helplines</h3>
+                        <div class="resource-items">
+                            <div class="resource-item helpline">
+                                <h4>National Mental Health Helpline</h4>
+                                <p>24/7 Support: 1800-599-0019</p>
+                            </div>
+                            <div class="resource-item helpline">
+                                <h4>AASRA</h4>
+                                <p>Suicide Prevention: 91-9820466726</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activities Page -->
+            <div class="page" id="activities-page">
+                <h2>Wellness Activities</h2>
+                <div class="activities-container">
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="fas fa-lungs"></i>
+                        </div>
+                        <h3>Breathing Exercise</h3>
+                        <p>A simple 4-7-8 breathing technique to reduce anxiety.</p>
+                        <button class="start-activity" data-activity="breathing">Start</button>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="fas fa-journal-whills"></i>
+                        </div>
+                        <h3>Gratitude Journal</h3>
+                        <p>Write down three things you're grateful for today.</p>
+                        <button class="start-activity" data-activity="gratitude">Start</button>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Calming Music</h3>
+                        <p>Listen to soothing sounds to help you relax.</p>
+                        <button class="start-activity" data-activity="music">Start</button>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Art Therapy</h3>
+                        <p>Express your feelings through guided art activities.</p>
+                        <button class="start-activity" data-activity="art">Start</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Page -->
+            <div class="page" id="progress-page">
+                <h2>Your Progress</h2>
+                <div class="progress-container">
+                    <div class="mood-chart">
+                        <h3>Mood Tracking</h3>
+                        <div class="chart-placeholder">
+                            <p>Your mood history will appear here as you use the app.</p>
+                        </div>
+                    </div>
+                    <div class="achievements">
+                        <h3>Achievements</h3>
+                        <div class="achievement-items">
+                            <div class="achievement">
+                                <div class="achievement-icon locked">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h4>First Conversation</h4>
+                                    <p>Complete your first chat session</p>
+                                </div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-icon locked">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h4>Breathing Master</h4>
+                                    <p>Complete 5 breathing exercises</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Page -->
+            <div class="page" id="settings-page">
+                <h2>Settings</h2>
+                <div class="settings-container">
+                    <div class="setting-group">
+                        <h3>Privacy</h3>
+                        <div class="setting-item">
+                            <label for="save-chat">Save Chat History</label>
+                            <label class="switch">
+                                <input type="checkbox" id="save-chat" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label for="anonymous-mode">Anonymous Mode</label>
+                            <label class="switch">
+                                <input type="checkbox" id="anonymous-mode" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="setting-group">
+                        <h3>Notifications</h3>
+                        <div class="setting-item">
+                            <label for="activity-reminders">Activity Reminders</label>
+                            <label class="switch">
+                                <input type="checkbox" id="activity-reminders">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="setting-group">
+                        <h3>About</h3>
+                        <div class="about-info">
+                            <p>MindfulCompanion v1.0</p>
+                            <p>This app is designed to provide anonymous, empathetic support to those facing emotional distress. It is not a substitute for professional mental health care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity Modals -->
+    <div class="modal" id="breathing-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Breathing Exercise</h2>
+            <div class="breathing-animation">
+                <div class="circle"></div>
+                <p class="instruction">Breathe in...</p>
+            </div>
+            <div class="timer">00:00</div>
+        </div>
+    </div>
+
+    <div class="modal" id="gratitude-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Gratitude Journal</h2>
+            <div class="gratitude-form">
+                <div class="gratitude-entry">
+                    <label>1. I am grateful for:</label>
+                    <textarea placeholder="Write something you're grateful for..."></textarea>
+                </div>
+                <div class="gratitude-entry">
+                    <label>2. I am grateful for:</label>
+                    <textarea placeholder="Write something you're grateful for..."></textarea>
+                </div>
+                <div class="gratitude-entry">
+                    <label>3. I am grateful for:</label>
+                    <textarea placeholder="Write something you're grateful for..."></textarea>
+                </div>
+                <button class="save-gratitude">Save Entry</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="music-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Calming Music</h2>
+            <div class="music-player">
+                <div class="music-options">
+                    <div class="music-option active" data-music="nature">Nature Sounds</div>
+                    <div class="music-option" data-music="meditation">Meditation Music</div>
+                    <div class="music-option" data-music="piano">Gentle Piano</div>
+                </div>
+                <div class="player-controls">
+                    <button id="play-pause"><i class="fas fa-play"></i></button>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="volume-control">
+                        <i class="fas fa-volume-up"></i>
+                        <input type="range" min="0" max="100" value="80" class="volume-slider">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="art-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Art Therapy</h2>
+            <div class="art-therapy">
+                <div class="art-prompt">
+                    <p>Draw how you're feeling right now using colors and shapes.</p>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="art-canvas" width="500" height="300"></canvas>
+                </div>
+                <div class="art-tools">
+                    <div class="color-picker">
+                        <div class="color" data-color="#ff0000" style="background-color: #ff0000;"></div>
+                        <div class="color" data-color="#0000ff" style="background-color: #0000ff;"></div>
+                        <div class="color" data-color="#00ff00" style="background-color: #00ff00;"></div>
+                        <div class="color" data-color="#ffff00" style="background-color: #ffff00;"></div>
+                        <div class="color" data-color="#000000" style="background-color: #000000;"></div>
+                    </div>
+                    <button id="clear-canvas">Clear</button>
+                    <button id="save-artwork">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/activities.js"></script>
+</body>
+>>>>>>> ec684ac5c7e70ff0314a70bebb0713b742d6f8be
 </html>
